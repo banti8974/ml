@@ -1,0 +1,13 @@
+grade = []
+for i in df['Final Grade'].values:
+    if i>= 0 and i< 40:
+        grade.append('F')
+    elif i>= 40 and i< 60:
+        grade.append('c')
+    else: 
+        grade.append('A')
+
+
+df_Copy = df
+se = pd.Series(grade)
+df_Copy['Grade'] = se.values
